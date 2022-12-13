@@ -1,0 +1,54 @@
+* {
+    margin:0;
+    padding: 0;
+}
+#wrap {
+    width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 200px 400px 200px;
+    grid-gap: 10px;
+    grid-template-areas: 
+    "box1 box3"
+    "box2 box3"
+    "box4 box3"
+}
+header {
+    border: 1px solid black;
+    background: #666;
+    grid-area: box1;
+}
+section {
+    border: 1px solid black;
+    grid-area: box2;
+}
+aside {
+    border: 1px solid black;
+    grid-area: box3;
+}
+
+footer {
+    border: 1px solid black;
+    grid-area: box4;
+}
+
+.red {
+    width:70%;
+    height: 80%;
+    background: pink;
+    margin: 20px;
+}
+
+.green {
+    width:70%;
+    height: 40%;
+    background: greenyellow;
+    margin: 20px;
+}
+.green:first-child {
+    margin-left: 27%;
+    margin-bottom: 40px;
+}
