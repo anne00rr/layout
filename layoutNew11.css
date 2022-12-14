@@ -4,7 +4,8 @@
 }
 
 #wrap{
-    width: 60vw;
+    width: 80vw;
+    max-width: 700px;
     margin: 20px auto;
     padding: 20px;
     border: 1px solid black;
