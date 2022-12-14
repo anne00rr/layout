@@ -23,6 +23,10 @@ h1 {
     color:#121212;
     font-weight:bolder;
 }
+
+p{
+    font-family: 'Noto Sans', sans-serif;
+}
 #wrap #work {
     display: flex;
     flex-flow: row wrap;
@@ -34,11 +38,8 @@ h1 {
     background: rgba(255,255,255,.2);
     padding: 10px 20px;
     margin-top: 10px;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 #wrap button:hover {
     background: rgba(255,255,255,.8); ;
-}
-#wrap button::after {
-
 }
