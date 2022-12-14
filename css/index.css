@@ -8,10 +8,8 @@ body {
 }
 #wrap {
     width: 30vw;
-    max-width: 400px;
+    max-width: 450px;
     margin: 50px auto;
-    position: absolute;
-    top: 30%;
 }
 a {
     text-decoration: none;
@@ -28,14 +26,14 @@ h1 {
 
 p{
     font-family: 'Noto Sans', sans-serif;
-    font-size: .8em;
+    /* font-size: 1em; */
 }
-#wrap #work {
+#work {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
 }
-#wrap button {
+#work button {
     border-radius: 30px;
     border:1px solid #464646;
     background: rgba(255,255,255,.2);
@@ -43,6 +41,19 @@ p{
     margin-top: 10px;
     font-family: 'Montserrat', sans-serif;
 }
-#wrap button:hover {
+#work button:hover {
     background: rgba(255,255,255,.8); ;
+}
+article {
+    margin-top: 50px;
+}
+footer {
+    position: absolute;
+    bottom: 20px;
+    left:50%;
+    margin-left: -70.6px;
+    color:rgba(0,0,0,.5);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
 }
