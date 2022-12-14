@@ -8,7 +8,7 @@ body {
 }
 #wrap {
     width: 30vw;
-    max-width: 300px;
+    max-width: 400px;
     margin: 50px auto;
     position: absolute;
     top: 30%;
@@ -16,16 +16,19 @@ body {
 a {
     text-decoration: none;
     color: #000;
-    font-size: .9em;
+    font-size: 1em;
 }
 h1 {
     text-align: center;
     color:#121212;
     font-weight:bolder;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #121212;
 }
 
 p{
     font-family: 'Noto Sans', sans-serif;
+    font-size: .8em;
 }
 #wrap #work {
     display: flex;
