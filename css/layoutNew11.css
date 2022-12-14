@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#wrap{
+    width: 80vw;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 200px 200px 300px 100px;
+    grid-gap: 10px;
+    grid-template-areas: 
+    "box1 box1"
+    "box2 box2"
+    "box3 box4"
+    "box5 box5"
+}
+
+header {
+    border: 1px solid black;
+    background: #666;
+    grid-area: box1;
+}
+nav {
+    width: 55%;
+    height: 80%;
+    margin: 20px;
+    background: pink;
+}
+main {
+    border: 1px solid black;
+    background: greenyellow;
+    grid-area: box2;
+}
+section:first-of-type {
+    border: 1px solid black;
+    grid-area: box3;
+}
+section:last-of-type {
+    border: 1px solid black;
+    grid-area: box4;
+}
+footer {
+    border: 1px solid black;
+    grid-area: box5;
+}
