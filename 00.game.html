@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        document.write(`<h1>컴퓨터 가위 바위 보 맞추기</h1>`);
+        let game=prompt("가위, 바위, 보 중 하나를 입력해주세요","가위");
+        let gameImg;
+        //switch문으로 입력받은 값을 숫자로 변환하여 인식
+        switch(game){
+            case "가위":gameImg="1";
+            break;
+            case "바위":gameImg="2";
+            break;
+            case "보":gameImg="3";
+            break;
+            default:alert("잘못 입력하셨습니다");
+        };
+
+        //랜덤Math.random()으로 이미지 호출
+        let com=Math.ceil(Math.random()*3);
+        document.write(`<img src="images/math_img_${com}.jpg"><br>`);
+
+        //if문으로 일치여부에 따른 결과 도출
+        if(com==gameImg){
+            document.write(`<img src="images/game_1.jpg"><br>`);
+        }else{
+            document.write(`<img src="images/game_2.jpg"><br>`);
+        };
+    </script>
+    <title>수학객체 활용(가위, 바위, 보)</title>
+</head>
+<body>
+    
+</body>
+</html>
