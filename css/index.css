@@ -42,8 +42,9 @@ p{
     font-family: 'Montserrat', sans-serif;
 }
 
-#work button:nth-of-type(3) {
+#work button:nth-of-type(4) {
     border:1px solid palevioletred;
+    background: rgb(255, 212, 219);
 }
 
 #work button:hover {
@@ -56,7 +57,7 @@ footer {
     position: absolute;
     bottom: 0;
     left:50%;
-    margin-left: -70.6px;
+    margin-left: -90px;
     color:rgba(0,0,0,.5);
     display: flex;
     flex-flow: row wrap;
