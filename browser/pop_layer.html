@@ -7,7 +7,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
     <style>
         body {
-            background: #999;
             font-family: 'Noto Sans KR', sans-serif;
         }
 
@@ -16,12 +15,28 @@
             text-align: center;
             /* margin-top: 80px; */
         }
+
+        #bgImg {
+            width: 100vw;
+            height: 95vh;
+            background:url(img/bgimg.png) no-repeat left top;
+        }
+        #bgColor {
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0,0,0,.5);
+            position: absolute;
+            top:0;
+            left:0;
+            z-index: 100;
+        }
         .popup {
             border-radius: 30px;
             background: #F5CC71;
             width: 300px;
             height: 220px;
             padding: 10px;
+            box-shadow:0 1px 4px rgba(0,0,0,.5);
         }
         .popup h1 {
             position: absolute;
@@ -51,7 +66,6 @@
             background: none;
             border: 0;
             font-size: .8em;
-            cursor: pointer;
         }
 
         #notice {
@@ -66,6 +80,8 @@
             left: 550px;
             top: 100px;
             z-index: 999;
+            filter: drop-shadow(0 1px 4px rgba(0,0,0,.5)); 
+
         }
 
         #popImg button{
@@ -79,8 +95,10 @@
 </head>
 <body>
     <h1>LOGO</h1>
-    <pre>
-        <!-- 입력한 그대로 출력 -->
+    <div id="bgImg"></div>
+    <div id="bgColor"></div>
+    <!-- <pre>
+        입력한 그대로 출력
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
 Albam ipsam molestiam explentur praetermissum loco. Possent latinas, quietem, audiebam discidia poterimus numquidnam quadam miserum ipsam. 
 
@@ -150,7 +168,7 @@ Graecis constituamus habent quadam dictum impetum cedentem accessio.
 
 Futuris concordia fruenda transferam primos confirmatur. 
 Tenebo appetere afflueret placuit approbantibus peccandi. Quantus iudicandum scripta finxerat sublata negent mandamus, insolens, verbum ordiamur omnino. Comprobavit magna gravitate, condimentum plane suspicio audivi scripserit levius. Dici debilitati iucunde vocant justo consequentis. Occultarum acuti curiosi pendet beatam declarant, fastidii indocti interrogari ornare petentium.
-    </pre>
+    </pre> -->
 
     
     <!-- 원본문서와 별도의 div로 
@@ -162,12 +180,12 @@ Tenebo appetere afflueret placuit approbantibus peccandi. Quantus iudicandum scr
             <b>12월 22일 오후 3시 이후</b>에 결제하신 상품은<br>
             <b>12월 26일부터</b> 순차적으로 배송됩니다. </p>
         <p>배송 지연 기간 : <u>12.23(금) 휴무 > <b>12.26(월) 정상출고</u></b></p>
-        <button><img src="img/close_FILL0_wght400_GRAD0_opsz48.svg" alt=""></button>
+        <button><img src="img/closeIcon.svg" alt=""></button>
     </div>
 
     <div id="popImg">
         <img src="img/1201_pupup_RE.png" alt="pop">
-        <button><img src="img/close_FILL0_wght400_GRAD0_opsz48.svg" alt=""></button>
+        <button><img src="img/closeIcon.svg" alt=""></button>
     </div>
 
 
@@ -177,7 +195,7 @@ Tenebo appetere afflueret placuit approbantibus peccandi. Quantus iudicandum scr
         //쿼리셀렉터= 도큐먼트 안의 태그를 선택
         closeBtn.addEventListener('click', function(){
             document.querySelector('.popup').style.display='none'
-            document.querySelector('body').style.background='none'
+            document.querySelector('#bgColor').style.background='none'
         });
 
         closeImg.addEventListener('click',function(){
