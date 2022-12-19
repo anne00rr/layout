@@ -34,6 +34,7 @@ h1 {
 .item{
     position: relative;
     width: 640px;
+    min-width: 30vh;
     height: auto;
     padding: 15px 20px;
 }
@@ -44,10 +45,10 @@ button {
     border: 1px solid #344d08;
     color:#344d08;
     border-radius: 50%;
-    cursor: pointer;
     position: absolute;
     right: 30px;
     bottom: 20px;
+    cursor: pointer;
 }
 button:hover{
     transition: all .2s;
@@ -68,4 +69,7 @@ button:hover{
 }
 .detail p {
     line-height: 1.5em;
+}
+.detail p:last-of-type{
+    font-size: .8em;
 }
