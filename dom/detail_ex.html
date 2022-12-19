@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/detail_ex.css">
+    <title>상세 설명</title>
+</head>
+<body>
+    <div id="wrap">
+        <h1><a href="detail_ex.html">LOGO</a></h1>
+        <p><i>2022 Christmas Market with Anne0.0<br>
+            We wish you a Merry Christmas!🎄</i></p>
+        <div id="container">
+            <div class="item">
+                <div class="imgArea">
+                    <img src="img/winterItem_1.png" alt="gloves">
+                    <button id="open1" class="over" onclick="showDetail(1);">+ Detail</button>
+                </div>
+                <div id="sangse1" class="detail">
+                    <h4>Love letter knit gloves (6 colors)</h4>
+                    <p>The 6 versions are composed of warm colors that can match well with any clothes.
+                        Made in a domestic factory with high grade lambswool yarn.</p>
+                    <button id="close" class="hide" onclick="hideDetail(1);">Close</button>
+                </div>
+                
+            </div>
+
+            <div class="item">
+                <div class="imgArea">
+                    <img src="img/winterItem_2.png" alt="giftSet">
+                    <button id="open2" class="over" onclick="showDetail(2);">+ Detail</button>
+                </div>
+                <div id="sangse2" class="detail">
+                    <h4>Christmas gift set (4 options)</h4>
+                    <p>This gift package is designed to present loved ones as the end of 2022 and the new year of 2023 begin. 4 products option is composed of only best sellers.</p>
+                    <button id="close" class="hide" onclick="hideDetail(2);">Close</button>
+                </div>
+                
+            </div>
+    </div>
+
+    </div>
+<!-- 자바스크립트 삽입 -->
+    <script>
+        function showDetail(selNum){
+            document.querySelector(`#sangse${selNum}`).style.display='block';
+            document.querySelector(`#open${selNum}`).style.display='none';
+        };
+
+        function hideDetail(selNum){
+            document.querySelector(`#sangse${selNum}`).style.display='none';
+            document.querySelector(`#open${selNum}`).style.display='block';
+        }
+    </script>
+
+
+</body>
+</html>
