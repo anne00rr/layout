@@ -28,12 +28,13 @@ p{
     font-family: 'Noto Sans', sans-serif;
     /* font-size: 1em; */
 }
-#work {
+#script,#layout {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
+    margin-bottom: 20px;
 }
-#work button {
+button {
     border-radius: 30px;
     border:1px solid #464646;
     background: rgba(255,255,255,.2);
@@ -42,12 +43,16 @@ p{
     font-family: 'Montserrat', sans-serif;
 }
 
-#work button:nth-of-type(4) {
+#script button:first-of-type {
     border:1px solid palevioletred;
     background: rgb(255, 212, 219);
 }
+#layout button:last-of-type {
+    border:none;
+    background: none;
+}
 
-#work button:hover {
+button:hover {
     background: rgba(255,255,255,.8); ;
 }
 article {
