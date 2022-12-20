@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>라이트박스</title>
+    <link rel="stylesheet" href="css/lightbox_copy.css">
+  </head>
+  <body>
+    <div id="bgColor">
+      <div class="row">
+        <ul>
+          <!-- 
+            data-src: html상에서는 의미 없음. 스크립트에서 사용되는 소자
+            src: html사양에서 정의된 기능이 있는 속성 -->
+          <li><img src="img/winterItem_1_thumb.png" data-src="img/winterItem_1.png" class="pic"></li>
+          <li><img src="img/winterItem_2_thumb.png" data-src="img/winterItem_2.png" class="pic"></li>
+          <li><img src="img/winterItem_3_thumb.png" data-src="img/winterItem_3.png" class="pic"></li> 
+          <li><img src="img/winterItem_4_thumb.png" data-src="img/winterItem_4.png" class="pic"></li>
+          <li><img src="img/winterItem_5_thumb.png" data-src="img/winterItem_5.png" class="pic"></li>
+          <li><img src="img/winterItem_6_thumb.png" data-src="img/winterItem_6.png" class="pic"></li>          
+        </ul>    
+      </div>
+      <div id="lightbox">
+        <img src="img/winterItem_1.png" alt="" id="lightboxImage">			
+      </div>
+    </div>
+
+
+    <!-- 스크립트 -->
+    <script>
+      let pics= document.getElementsByClassName('pic');
+      //.pic인 요소를 가져와 변수 pics에 저장
+      //querySelectorALL('.pic')으로도 동일한 기능
+
+      let lightbox=document.getElementById('lightbox');
+      let lightboxImage=document.getElementById('lightboxImage');
+
+
+
+      for(i=0;i<pics.length;i++){
+        pics[i].addEventListener('click',showLightbox);    
+        //원래 이벤트 처리기(클릭할지, 실행할 코드)지만 코드에 함수호출만 넣는걸로. 
+        //addEventListener는 클릭이벤트에서 'on'을 넣지 않음
+        //addEventListener안에 함수명 호출시 '()'없이 함수명만
+      };
+      function showLightbox(){
+        let bigImg = this.getAttribute('data-src');
+        //this.data-src로 속성 바로 호출 가능
+        lightboxImage.setAttribute('src',bigImg);
+        lightbox.style.display='block';
+      };
+
+
+      // click이벤트가 발생했을 때 실행할 함수
+      lightbox.onclick = function(){
+        lightbox.style.display='none';
+      }
+
+
+    </script>
+  </body>
+</html>
