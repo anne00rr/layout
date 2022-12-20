@@ -6,6 +6,7 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
+    height: 100w
 }
 a {
     text-decoration: none;
@@ -35,9 +36,13 @@ h1 {
     text-align: center;
     margin-top: 50px;
 }
+#container>img:first-of-type {
+    width: 80%;
+    max-width: 640px;
+}
 #originPic {
     background: url(../img/winterItem_1.png) no-repeat;
-    height: 430px;
+    height:430px;
     background-size: cover;
     filter: blur(3px);
     z-index: -1;
