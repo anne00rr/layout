@@ -1,20 +1,38 @@
 body {
     background:#fff7e3 ;
     color:#344d08;
+    font-family: 'Montserrat', sans-serif;
 }
-#wrap {
+header {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     position: relative;
-    height: 100w
+    text-align: center;
 }
+.btn {
+    border: 1px solid #344d08;
+    padding: 5px 0;
+    border-radius: 20px;
+}
+.btn:nth-child(n+3) {
+    background: rgba(52,77,8,.2);
+}
+nav>ul {
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: center;
+}
+
 a {
     text-decoration: none;
     color: #344d08;
 }
-ul {
+.sub {
+    display: none;
     list-style: none;
-    padding:0
+    margin:0;
+    padding:0;
 }
 h1 {
     font-family: 'Playfair Display SC', serif;
@@ -31,7 +49,7 @@ h1 {
     text-align: center;
 }
 
-#container {
+main #container {
     height: 446px;
     text-align: center;
     margin-top: 50px;
@@ -42,11 +60,13 @@ h1 {
 }
 #originPic {
     background: url(../img/winterItem_1.png) no-repeat;
+    width: 110vw;
     height:430px;
     background-size: cover;
     filter: blur(3px);
-    z-index: -1;
-    margin: -465px 0;
+    z-index: -999;
+    margin: -465px -10%;
+    display: none;
 }
 
 #pics {
