@@ -61,16 +61,20 @@ h1 {
 }
 
 main #container {
-    height: 446px;
+    max-height: 446px;
     text-align: center;
     margin-top: 50px;
+    background: url(../img/winterItem_1.png) no-repeat;
+    width: 110vw;
+    height:430px;
+    background-size: cover;
 }
 #container>img:first-of-type {
     width: 80%;
     max-width: 640px;
 }
 #originPic {
-    background: url(../img/winterItem_1.png) no-repeat;
+    background: rgba(255,255,255,.5);
     width: 110vw;
     height:430px;
     background-size: cover;
@@ -91,4 +95,64 @@ main #container {
 .pic {
     margin: 0 7px;
     width: 95px;
+}
+
+/* 미디어쿼리 */
+@media screen and (min-width: 721px){
+    nav {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 40px 50px;
+        grid-template-areas: 
+            "box1 box2 box3 box4 box5"
+            ". . box6 box7 box8";
+        padding: 0;
+        height: 40px;
+        width: 720px;
+        margin: 20px auto 100px;
+        /* border-bottom: 1px dotted #344d08; */
+    }
+    
+    #home {
+        grid-area: box1;
+    }
+    #about {
+        grid-area: box2;
+    }
+    #shop {
+        grid-area: box3;
+    }
+    #notice {
+        grid-area: box4;
+    }
+    #qna {
+        grid-area: box5;
+    }
+    #shop_sub {
+        grid-area: box6;
+    }
+    #notice_sub {
+        grid-area: box7;
+    }
+    #qna_sub {
+        grid-area: box8;
+    }
+    
+    .btn {
+        width: 120px;
+        height: 20px;
+        margin:0;
+
+    }
+    nav ul li {
+        /* margin-left:60px; */
+        padding:0;
+        width: 100px;
+        position: relative;
+        left:10px;
+        top: 10px;
+    }
+    nav ul li:last-child {
+        border-right: 0;
+    }
 }
