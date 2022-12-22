@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,400&family=Playfair+Display+SC:wght@900&display=swap" rel="stylesheet">
-    <script src="js/jquery.js"></script>
+    <script src="../../jquery/js/jquery.js"></script>
     <link rel="stylesheet" href="css/gallery_ex.css">
     <title>Anne_gallery</title>
 </head>
@@ -16,24 +16,24 @@
             <h1><a href="gallery_ex.html">Anne</a></h1>
             
                 <nav>
-                    <p class="btn"><a href="#">HOME</a>
-                    <p class="btn"><a href="#">ABOUT</a>
-                    <p class="btn"><a href="#"><b>SHOP</b></a>
-                        <ul class="sub">
+                    <p id="home" class="btn"><a href="#">HOME</a>
+                    <p id="about" class="btn"><a href="#">ABOUT</a>
+                    <p id="shop" class="btn"><a href="#"><b>SHOP</b></a>
+                        <ul id="shop_sub" class="sub">
                                 <li><a href="#">ALL</a></li>
                                 <li><a href="#">APPAREL</a></li>
                                 <li><a href="#">LIVING</a></li>
                                 <li><a href="#">GIFT Set</a></li>
                         </ul>
                     </p>
-                    <p class="btn"><a href="#"><b>NOTICE</b></a>
-                        <ul class="sub">
+                    <p id="notice" class="btn"><a href="#"><b>NOTICE</b></a>
+                        <ul id="notice_sub" class="sub">
                                 <li><a href="#">News</a></li>
                                 <li><a href="#">Event</a></li>
                         </ul>
                     </p>
-                    <p class="btn"><a href="#"><b>QnA</b></a>
-                        <ul class="sub">
+                    <p id="qna" class="btn"><a href="#"><b>QnA</b></a>
+                        <ul id="qna_sub" class="sub">
                                 <li><a href="#">My Account</a></li>
                                 <li><a href="#">Contact</a></li>
                         </ul>
@@ -77,7 +77,7 @@
 
     let pics=document.getElementsByClassName('pic');
     let originImg=document.querySelector('#originImg');
-    let originPic=document.querySelector('#originPic');
+    let container=document.querySelector('#container');
     
 
     for(i=0; i<pics.length; i++){
@@ -87,7 +87,7 @@
     function changeImg(){
         let bigImg = this.getAttribute('data-src');
         originImg.setAttribute('src',bigImg);
-        originPic.style.backgroundImage=`url(${bigImg})`;
+        container.style.backgroundImage=`url(${bigImg})`;
     }
 </script>
 
