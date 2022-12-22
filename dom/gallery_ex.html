@@ -5,36 +5,76 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,400&family=Playfair+Display+SC:wght@900&display=swap" rel="stylesheet">
+    <script src="../../jquery/js/jquery.js"></script>
     <link rel="stylesheet" href="css/gallery_ex.css">
     <title>Anne_gallery</title>
 </head>
 <body>
     <div id="wrap">
         
-        
-        <h1><a href="gallery_ex.html">Anne</a></h1>
-        <p>2022 Holiday with Anne0.0<br>
-            We wish you a Merry Christmas!🎄</p>
-        <div id="container">
+        <header>
+            <h1><a href="gallery_ex.html">Anne</a></h1>
             
-            <img src="img/winterItem_1.png" alt="" id="originImg">
-            
-            <ul id="pics">
-                <li><img src="img/winterItem_1_thumb.png" data-src="img/winterItem_1.png" class="pic"></li>
-                <li><img src="img/winterItem_2_thumb.png" data-src="img/winterItem_2.png" class="pic"></li>
-                <li><img src="img/winterItem_3_thumb.png" data-src="img/winterItem_3.png" class="pic"></li> 
-                <li><img src="img/winterItem_4_thumb.png" data-src="img/winterItem_4.png" class="pic"></li>
-                <li><img src="img/winterItem_5_thumb.png" data-src="img/winterItem_5.png" class="pic"></li>
-                <li><img src="img/winterItem_6_thumb.png" data-src="img/winterItem_6.png" class="pic"></li>          
-            </ul>    
-        </div>
-        <div id="originPic"></div>
-            
+                <nav>
+                    <p class="btn"><a href="#">HOME</a>
+                        <p class="btn"><a href="#">ABOUT</a>
+                    <p class="btn"><a href="#"><b>SHOP</b></a>
+                        <ul class="sub">
+                                <li><a href="#">ALL</a></li>
+                                <li><a href="#">APPAREL</a></li>
+                                <li><a href="#">LIVING</a></li>
+                                <li><a href="#">GIFT Set</a></li>
+                        </ul>
+                    </p>
+                    <p class="btn"><a href="#"><b>NOTICE</b></a>
+                        <ul class="sub">
+                                <li><a href="#">News</a></li>
+                                <li><a href="#">Event</a></li>
+                        </ul>
+                    </p>
+                    <p class="btn"><a href="#"><b>CONTACT</b></a>
+                        <ul class="sub">
+                                <li><a href="#">My Account</a></li>
+                                <li><a href="#">QnA</a></li>
+                        </ul>
+                    </p>
+                </nav>
+
+                <p>2022 Holiday with Anne0.0<br>
+                    We wish you a Merry Christmas!🎄</p>
+        </header>
+
+        <main>
+            <div id="container">
+                <img src="img/winterItem_1.png" alt="" id="originImg">
+                
+                <ul id="pics">
+                    <li><img src="img/winterItem_1_thumb.png" data-src="img/winterItem_1.png" class="pic"></li>
+                    <li><img src="img/winterItem_2_thumb.png" data-src="img/winterItem_2.png" class="pic"></li>
+                    <li><img src="img/winterItem_3_thumb.png" data-src="img/winterItem_3.png" class="pic"></li> 
+                    <li><img src="img/winterItem_4_thumb.png" data-src="img/winterItem_4.png" class="pic"></li>
+                    <li><img src="img/winterItem_5_thumb.png" data-src="img/winterItem_5.png" class="pic"></li>
+                    <li><img src="img/winterItem_6_thumb.png" data-src="img/winterItem_6.png" class="pic"></li>          
+                </ul>    
+            </div>
+            <div id="originPic"></div>
+        </main>
     </div>
 
     </div>
 <!-- 자바스크립트 삽입 -->
 <script>
+    $(function(){
+            $('.btn a').on('mouseover',function(){
+                $('.btn').next('ul').filter(':visible').slideUp();
+
+                $(this).parent().next().slideDown();
+                
+                return false;
+            });
+        });
+// 갤러리 영역 
+
     let pics=document.getElementsByClassName('pic');
     let originImg=document.querySelector('#originImg');
     let originPic=document.querySelector('#originPic');
