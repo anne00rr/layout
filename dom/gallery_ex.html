@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,400&family=Playfair+Display+SC:wght@900&display=swap" rel="stylesheet">
-    <script src="js/jquery.js"></script>
+    <script src="../../jquery/js/jquery.js"></script>
     <link rel="stylesheet" href="css/gallery_ex.css">
     <title>Anne_gallery</title>
 </head>
@@ -63,33 +63,8 @@
 
     </div>
 <!-- 자바스크립트 삽입 -->
-<script>
-    $(function(){
-            $('.btn a').on('mouseover',function(){
-                $('.btn').next('ul').filter(':visible').slideUp();
+<script src="js/gallery_ex.js"></script>
 
-                $(this).parent().next().slideDown();
-                
-                return false;
-            });
-        });
-// 갤러리 영역 
-
-    let pics=document.getElementsByClassName('pic');
-    let originImg=document.querySelector('#originImg');
-    let container=document.querySelector('#container');
-    
-
-    for(i=0; i<pics.length; i++){
-        pics[i].addEventListener('click',changeImg)
-    }
-
-    function changeImg(){
-        let bigImg = this.getAttribute('data-src');
-        originImg.setAttribute('src',bigImg);
-        container.style.backgroundImage=`url(${bigImg})`;
-    }
-</script>
 
 
 </body>
