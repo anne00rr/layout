@@ -61,11 +61,11 @@ h1 {
 }
 
 main #container {
-    max-height: 446px;
+    max-height: 420px;
     text-align: center;
     margin-top: 50px;
     background: url(../img/winterItem_1.png) no-repeat;
-    width: 110vw;
+    width: 100vw;
     height:430px;
     background-size: cover;
 }
@@ -102,7 +102,7 @@ main #container {
     nav {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: 40px 50px;
+        grid-template-rows: 40px 80px;
         grid-template-areas: 
             "box1 box2 box3 box4 box5"
             ". . box6 box7 box8";
@@ -111,6 +111,8 @@ main #container {
         width: 720px;
         margin: 20px auto 100px;
         /* border-bottom: 1px dotted #344d08; */
+        place-items: center;
+
     }
     
     #home {
@@ -142,15 +144,14 @@ main #container {
         width: 120px;
         height: 20px;
         margin:0;
-
     }
     nav ul li {
-        /* margin-left:60px; */
-        padding:0;
+        padding-bottom:5px;
         width: 100px;
         position: relative;
-        left:10px;
-        top: 10px;
+        left:5px;
+        top: 5px;
+        border-bottom: 1px dotted #344d08;
     }
     nav ul li:last-child {
         border-right: 0;
