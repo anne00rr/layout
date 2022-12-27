@@ -1,4 +1,18 @@
-// 메뉴바 영역 
+// 메뉴바 영역
+
+
+//모바일
+$(function(){
+  let trigger = $('#trigger');
+  let menu = $('nav .btn');
+
+  $('#trigger').on('click',function(e){
+      e.preventDefault();
+      menu.slideToggle();
+  });
+});
+
+//pc_아코디언
     $(function(){
             $('.btn a').on('mouseover',function(){
                 $('.btn').next('ul').filter(':visible').slideUp();
