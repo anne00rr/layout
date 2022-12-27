@@ -129,7 +129,7 @@ main #container {
     margin: 10px;
   }
   .slick-prev:before, .slick-next:before {
-    color: rgb(214, 214, 214);
+    color: #344d08;
   }
 
   .center .slick-center h3 {
