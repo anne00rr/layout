@@ -105,7 +105,7 @@ main #container {
 }
 
 
-/* 슬릭 */
+/* slick */
 
 #container {
     margin-bottom: 2%;
@@ -117,12 +117,12 @@ main #container {
     padding-top: 10px;
 }
 #s_slide img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
     margin: 0px auto;
   }
   .slider {
-    width: 50%;
+    width: 80%;
     margin: 0px auto;
   }
   .slider .slick-slide {
