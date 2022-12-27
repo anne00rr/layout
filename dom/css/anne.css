@@ -1,0 +1,219 @@
+*{
+    margin:0;
+    padding:0;
+}
+body {
+    background:#fff7e3 ;
+    color:#344d08;
+    font-family: 'Montserrat', sans-serif;
+}
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+}
+li {
+    list-style: none;
+}
+.btn {
+    border: 1px solid #344d08;
+    padding: 5px 0;
+    margin: 10px 20%;
+    border-radius: 20px;
+}
+.btn:nth-child(n+3) {
+    background: rgba(52,77,8,.2);
+}
+nav {
+    margin-bottom: 50px;
+}
+nav>ul {
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+    color: #344d08;
+    cursor: pointer;
+}
+.sub {
+    display: none;
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+h1 {
+    font-family: 'Playfair Display SC', serif;
+    font-size: 3em;
+    text-align: center;
+    margin: 50px auto 10px;
+    padding: 10px;
+    width: 200px;
+    border: 1px solid #344d08;
+    border-radius: 50%;
+}
+
+h2 {
+    font-family: 'Playfair Display SC', serif;
+    text-align: center;
+    font-size: 2.2em;
+    text-decoration: underline;
+}
+#wrap >p {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+main #container {
+    max-height: 720px;
+    text-align: center;
+    margin-top: 50px;
+    background: url(../img/winterItem_1_bg.png) no-repeat;
+    width: 100vw;
+    background-size: cover;
+}
+#container>img:first-of-type {
+    width: 80%;
+    max-width: 640px;
+}
+#originPic {
+    background: rgba(255,255,255,.5);
+    width: 110vw;
+    height:430px;
+    background-size: cover;
+    filter: blur(3px);
+    z-index: -999;
+    margin: -465px -10%;
+    display: none;
+}
+
+#pics {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    cursor: pointer;
+    text-align: center;
+}
+
+.pic {
+    margin: 0 7px;
+    width: 95px;
+}
+
+
+/* 슬릭 */
+
+#container {
+    margin-bottom: 3%;
+}
+
+#s_slide p {
+    text-align: center;
+    font-size: .8em;
+    padding-top: 10px;
+}
+#s_slide img {
+    max-width: 100%;
+    height: auto;
+  }
+  .slider {
+    width: 50%;
+    margin: 0px auto;
+  }
+  .slider .slick-slide {
+    margin: 10px;
+  }
+  .slick-prev:before, .slick-next:before {
+    color: rgb(214, 214, 214);
+  }
+
+  .center .slick-center h3 {
+    -moz-transform: scale(1.08);
+    -ms-transform: scale(1.08);
+    -o-transform: scale(1.08);
+    -webkit-transform: scale(1.08);
+    color: #e67e22;
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  .center h3 {
+    opacity: 0.5;
+    transition: all 300ms ease;
+  }
+  .content {
+    margin: auto;
+    padding: 20px;
+    width: 600px;
+  }
+  .content:after,
+  .buttons::after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+
+
+/* 미디어쿼리 */
+@media screen and (min-width: 721px){
+    nav {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 40px 80px;
+        grid-template-areas: 
+            "box1 box2 box3 box4 box5"
+            ". . box6 box7 box8";
+        padding: 0;
+        height: 40px;
+        width: 720px;
+        margin: 20px auto 100px;
+        /* border-bottom: 1px dotted #344d08; */
+        place-items: center;
+
+    }
+    
+    #home {
+        grid-area: box1;
+    }
+    #about {
+        grid-area: box2;
+    }
+    #shop {
+        grid-area: box3;
+    }
+    #notice {
+        grid-area: box4;
+    }
+    #qna {
+        grid-area: box5;
+    }
+    #shop_sub {
+        grid-area: box6;
+    }
+    #notice_sub {
+        grid-area: box7;
+    }
+    #qna_sub {
+        grid-area: box8;
+    }
+    
+    .btn {
+        width: 120px;
+        height: 20px;
+        margin:0;
+    }
+    nav ul li {
+        padding-bottom:5px;
+        width: 100px;
+        position: relative;
+        left:5px;
+        top: 5px;
+        border-bottom: 1px dotted #344d08;
+    }
+    nav ul li:last-child {
+        border-right: 0;
+    }
+}
