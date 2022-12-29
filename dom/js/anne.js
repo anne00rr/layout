@@ -44,8 +44,8 @@ $(function(){
 // 슬릭슬라이드
 $('.center').slick({
     centerMode: true,
-    centerPadding: '60px',
-    slidesToShow: 3,
+    centerPadding: '50px',
+    slidesToShow: 5,
     responsive: [
       {
         breakpoint: 768,
